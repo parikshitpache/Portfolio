@@ -25,15 +25,20 @@ export default function CloudinaryPlayerEmbed({
   posterSrc,
   deliveryUrl,
 }) {
+  const activeCloud =
+    cloudName?.trim() ||
+    (typeof import.meta !== "undefined" && import.meta.env?.VITE_CLOUDINARY_CLOUD_NAME) ||
+    "dzzmfzt4g";
+
   const src = deliveryUrl?.trim()
     ? deliveryUrl.trim()
-    : `https://res.cloudinary.com/${cloudName}/video/upload/q_auto,f_auto/${encodedPublicSegments(publicId)}`;
+    : `https://res.cloudinary.com/${activeCloud}/video/upload/q_auto,f_auto/${encodedPublicSegments(publicId)}`;
 
   const poster =
     posterSrc?.trim() ||
     (deliveryUrl ? posterFromDeliveryMp4(deliveryUrl) : undefined) ||
-    (cloudName && publicId
-      ? `https://res.cloudinary.com/${cloudName}/video/upload/so_1,q_auto,f_jpg,w_1280/${encodedPublicSegments(publicId)}`
+    (activeCloud && publicId
+      ? `https://res.cloudinary.com/${activeCloud}/video/upload/so_1,q_auto,f_jpg,w_1280/${encodedPublicSegments(publicId)}`
       : undefined);
 
   const videoRef = useRef(null);

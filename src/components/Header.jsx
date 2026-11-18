@@ -460,12 +460,12 @@ export default function Hero() {
             <div className="w-10 h-10 rounded-full overflow-hidden border border-white/20 bg-black shrink-0 relative">
               <img
                 src="/profile.jpg"
-                alt="Profile Icon"
+                alt="Parikshit Pache"
                 className="w-full h-full object-cover"
                 onError={(e) => { e.target.style.display = 'none'; }}
               />
             </div>
-            <span className="font-medium text-[clamp(16px,1.2vw,20px)] tracking-tight">Abhishek Wake</span>
+            <span className="font-medium text-[clamp(16px,1.2vw,20px)] tracking-tight">Parikshit Pache</span>
           </div>
 
           <div className="hidden lg:flex col-span-4 flex-col justify-center">
@@ -490,7 +490,7 @@ export default function Hero() {
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
               )}
             </button>
-            <a ref={headerCtaRef} href="mailto:abhishekwake111@gmail.com" className="group cursor-pointer pointer-events-auto relative media-uninvert" aria-label="Send us an email" role="button" style={{ opacity: 1, transform: "none" }}>
+            <a ref={headerCtaRef} href={`mailto:${(typeof import.meta !== "undefined" && import.meta.env?.VITE_CONTACT_EMAIL) || "parikshitpache@gmail.com"}`} className="group cursor-pointer pointer-events-auto relative media-uninvert" aria-label="Send us an email" role="button" style={{ opacity: 1, transform: "none" }}>
               <div className="absolute left-0 top-0 w-12 3xl:w-14 h-12 3xl:h-14 bg-white border border-white/10 rounded-full flex items-center justify-center rotate-180 scale-95 group-hover:scale-100 group-hover:rotate-0 group-hover:-translate-x-full transition-transform duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] -z-10">
                 <span className="text-lg lg:text-xl 3xl:text-2xl">🤙🏼</span>
               </div>

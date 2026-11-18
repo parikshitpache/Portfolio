@@ -1,13 +1,17 @@
-/** Selected work reels — swap / extend third slot when ready. */
+/** Selected work reels — powered by Cloudinary and YouTube. */
+
+const CLOUD_NAME =
+  (typeof import.meta !== "undefined" && import.meta.env?.VITE_CLOUDINARY_CLOUD_NAME) ||
+  "dzzmfzt4g";
 
 export const SELECTED_PROJECTS = [
   {
     id: "pay-own-clg-fee",
     kind: "cloudinary",
     deliveryUrl:
-      "https://res.cloudinary.com/dzzmfzt4g/video/upload/q_auto/f_auto/v1781867376/PayYourOwnClgFeeIntroEdit_qmn1rj.mp4",
+      `https://res.cloudinary.com/${CLOUD_NAME}/video/upload/q_auto/f_auto/v1781867376/PayYourOwnClgFeeIntroEdit_qmn1rj.mp4`,
     thumbSrc:
-      "https://res.cloudinary.com/dzzmfzt4g/video/upload/so_1,q_auto,f_jpg,w_1280/v1781867376/PayYourOwnClgFeeIntroEdit_qmn1rj.jpg",
+      `https://res.cloudinary.com/${CLOUD_NAME}/video/upload/so_1,q_auto,f_jpg,w_1280/v1781867376/PayYourOwnClgFeeIntroEdit_qmn1rj.jpg`,
     creator: "College Fee Intro Edit",
     audience:
       "Pay Your Own College Fee — Video Editing & Strategy Breakdown",
@@ -26,10 +30,10 @@ export const SELECTED_PROJECTS = [
   {
     id: "cloudinary-subeh",
     kind: "cloudinary",
-    cloudName: "dzzmfzt4g",
+    cloudName: CLOUD_NAME,
     publicId: "subeh_ke_7baje_1_rqyrd2",
     thumbSrc:
-      "https://res.cloudinary.com/dzzmfzt4g/video/upload/so_1/f_jpg/q_auto/subeh_ke_7baje_1_rqyrd2.jpg",
+      `https://res.cloudinary.com/${CLOUD_NAME}/video/upload/so_1/f_jpg/q_auto/subeh_ke_7baje_1_rqyrd2.jpg`,
     creator: "Cinematic storytelling Editing",
     audience: "Turning moments into cinematic experiences that feel as real as they look",
   },
@@ -37,9 +41,9 @@ export const SELECTED_PROJECTS = [
     id: "decoding-devops-final",
     kind: "cloudinary",
     deliveryUrl:
-      "https://res.cloudinary.com/dzzmfzt4g/video/upload/q_auto/f_auto/v1777403271/02_Decoding_DevOps_Final_1_1_kzgnd5.mp4",
+      `https://res.cloudinary.com/${CLOUD_NAME}/video/upload/q_auto/f_auto/v1777403271/02_Decoding_DevOps_Final_1_1_kzgnd5.mp4`,
     thumbSrc:
-      "https://res.cloudinary.com/dzzmfzt4g/video/upload/so_1,q_auto,f_jpg,w_1280/v1777403271/02_Decoding_DevOps_Final_1_1_kzgnd5.jpg",
+      `https://res.cloudinary.com/${CLOUD_NAME}/video/upload/so_1,q_auto,f_jpg,w_1280/v1777403271/02_Decoding_DevOps_Final_1_1_kzgnd5.jpg`,
     creator: "Decoding DevOps Mastery Course",
     audience: "Built for clarity, retention, and real-world DevOps learning at scale.",
   },
@@ -47,19 +51,19 @@ export const SELECTED_PROJECTS = [
     id: "devops-projects-final",
     kind: "cloudinary",
     deliveryUrl:
-      "https://res.cloudinary.com/dzzmfzt4g/video/upload/q_auto/f_auto/v1777403359/01_DevOps_Projects_Final_1_2_q8y0et.mp4",
+      `https://res.cloudinary.com/${CLOUD_NAME}/video/upload/q_auto/f_auto/v1777403359/01_DevOps_Projects_Final_1_2_q8y0et.mp4`,
     thumbSrc:
-      "https://res.cloudinary.com/dzzmfzt4g/video/upload/so_1,q_auto,f_jpg,w_1280/v1777403359/01_DevOps_Projects_Final_1_2_q8y0et.jpg",
+      `https://res.cloudinary.com/${CLOUD_NAME}/video/upload/so_1,q_auto,f_jpg,w_1280/v1777403359/01_DevOps_Projects_Final_1_2_q8y0et.jpg`,
     creator: "Real-World DevOps Projects",
     audience: "Breaking down real DevOps workflows into clear, actionable learning systems",
   },
   {
     id: "tharun-speaks-editing-secrets",
     kind: "cloudinary-sdk",
-    cloudName: "dzzmfzt4g",
+    cloudName: CLOUD_NAME,
     publicId: "TharunSpeaks_Video_Editing_Secrets_Revealed_o1awzc",
     thumbSrc:
-      "https://res.cloudinary.com/dzzmfzt4g/video/upload/w_1280,h_720,c_fill,so_3,g_auto,q_auto,f_auto/TharunSpeaks_Video_Editing_Secrets_Revealed_o1awzc.jpg",
+      `https://res.cloudinary.com/${CLOUD_NAME}/video/upload/w_1280,h_720,c_fill,so_3,g_auto,q_auto,f_auto/TharunSpeaks_Video_Editing_Secrets_Revealed_o1awzc.jpg`,
     creator: "Tharun Speaks Video Editing Revealed",
     audience: "Complete Video Editing And Stratergy Breakdown",
   },

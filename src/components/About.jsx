@@ -64,7 +64,7 @@ export default function About() {
           <div className="flex items-center gap-4 lg:gap-6 mb-8 lg:mb-12">
             <div className="w-8 lg:w-12 h-[1px] bg-white/20"></div>
             <h3 className="text-xs lg:text-sm font-mono tracking-widest uppercase text-[#a3a3a3]">
-              Hii im abhi
+              Hii im Parikshit
             </h3>
           </div>
           <p
@@ -88,7 +88,7 @@ export default function About() {
           <img
             ref={imageRef}
             src="/profile.jpg"
-            alt="Abhi Profile"
+            alt="Parikshit Profile"
             className="absolute inset-0 w-full h-full object-cover will-change-transform transform-gpu"
             onError={(e) => { e.target.src = rightPlaceholder; }}
           />

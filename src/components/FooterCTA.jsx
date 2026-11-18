@@ -4,7 +4,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const MAIL = "abhishekwake111@gmail.com";
+const MAIL =
+  (typeof import.meta !== "undefined" && import.meta.env?.VITE_CONTACT_EMAIL) ||
+  "parikshitpache@gmail.com";
 const WHATSAPP_DIGITS =
   typeof import.meta !== "undefined" && import.meta.env?.VITE_WHATSAPP_DIGITS
     ? String(import.meta.env.VITE_WHATSAPP_DIGITS).replace(/\D/g, "")
@@ -12,7 +14,8 @@ const WHATSAPP_DIGITS =
 
 /** WhatsApp URL — uses VITE_WHATSAPP_DIGITS or falls back to your number. */
 function whatsappHref() {
-  const digits = WHATSAPP_DIGITS || "918080127679";
+  const raw = WHATSAPP_DIGITS || "917822909219";
+  const digits = raw.length === 10 ? `91${raw}` : raw;
   return `https://wa.me/${digits}?text=${encodeURIComponent(
     "Hi — I'd like to talk about content."
   )}`;
@@ -80,7 +83,7 @@ export default function FooterCTA() {
       
       {/* Footer minimal signature */}
       <div className="absolute bottom-8 left-0 w-full flex justify-center text-xs font-mono tracking-widest uppercase text-[#a3a3a3] opacity-50">
-        © {new Date().getFullYear()} Abhishekwake.in
+        © {new Date().getFullYear()} Parikshitpache.in
       </div>
     </section>
   );

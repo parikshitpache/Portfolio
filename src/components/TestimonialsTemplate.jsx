@@ -2,21 +2,21 @@ import React, { useState } from "react";
 
 const testimonials = [
   {
-    quote: "Abhishek completely transformed our YouTube strategy. He doesn't just edit; he engineers retention. His pacing is flawless, and his visual storytelling helped us reach",
+    quote: "Parikshit completely transformed our YouTube strategy. He doesn't just edit; he engineers retention. His pacing is flawless, and his visual storytelling helped us reach",
     highlight: "over 500K+ total views across two videos.",
     name: "K9 & Charu",
     role: "YouTube Creators (1M+ Audience)",
     avatar: "/k9-charu.jpg"
   },
   {
-    quote: "I needed course intro videos that would actually convert. Abhishek delivered exactly that. His edits are crisp, engaging, and structurally perfect, helping my courses reach",
+    quote: "I needed course intro videos that would actually convert. Parikshit delivered exactly that. His edits are crisp, engaging, and structurally perfect, helping my courses reach",
     highlight: "250,000+ learners across 40+ countries.",
     name: "Imran Teli",
     role: "Top Educator & Instructor",
     avatar: "/imran.png"
   },
   {
-    quote: "Finding an editor who actually understands audience psychology is rare. Abhishek takes raw footage and turns it into polished, high-performing narratives that",
+    quote: "Finding an editor who actually understands audience psychology is rare. Parikshit takes raw footage and turns it into polished, high-performing narratives that",
     highlight: "consistently drive massive engagement.",
     name: "Anuj Bagade",
     role: "Entrepreneur",

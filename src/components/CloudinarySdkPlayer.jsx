@@ -9,8 +9,16 @@ export default function CloudinarySdkPlayer({ cloudName, publicId, poster }) {
   const disposedRef = useRef(false);
   const playerRef = useRef(null);
 
+  const activeCloud =
+    (cloudName && cloudName.trim()) ||
+    (typeof import.meta !== "undefined" && import.meta.env?.VITE_CLOUDINARY_CLOUD_NAME) ||
+    "dzzmfzt4g";
+  const apiKey =
+    (typeof import.meta !== "undefined" && import.meta.env?.VITE_CLOUDINARY_API_KEY) ||
+    "QoauRw4x2RWgehkdeWgLbQiWigg";
+
   useEffect(() => {
-    const idOk = typeof cloudName === "string" && cloudName.trim() && typeof publicId === "string" && publicId.trim();
+    const idOk = typeof activeCloud === "string" && activeCloud.trim() && typeof publicId === "string" && publicId.trim();
     if (!idOk) return;
 
     disposedRef.current = false;
@@ -23,8 +31,9 @@ export default function CloudinarySdkPlayer({ cloudName, publicId, poster }) {
       if (disposedRef.current || !videoRef.current) return;
 
       const result = await cloudinary.player(videoRef.current, {
-        cloudName: cloudName.trim(),
+        cloudName: activeCloud.trim(),
         publicId: publicId.trim(),
+        apiKey: apiKey,
         ...(typeof poster === "string" && poster.trim()
           ? { poster: poster.trim() }
           : {}),
@@ -67,7 +76,7 @@ export default function CloudinarySdkPlayer({ cloudName, publicId, poster }) {
       }
       playerRef.current = null;
     };
-  }, [cloudName, publicId, poster]);
+  }, [activeCloud, publicId, poster, apiKey]);
 
   return (
     <video
